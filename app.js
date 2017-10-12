@@ -14,7 +14,7 @@ var availableTags = [];
         {
         	var tmp = items[i].CODE;
         	var len = tmp.length;
- 
+
        		if (!((tmp[len] == 'J')&&(tmp[len-1] == 'D')))
        		{
        			 availableTags.push(items[i].CODE);
@@ -43,3 +43,26 @@ console.log(jsonobject);
     	source: availableTags
     });
   } );
+
+
+
+  function drawGraph()
+  {
+  	var code = document.getElementById('searchStock').value;
+  	console.log(code);
+  	var len = code.length;
+  	var codePush = code.slice(5,len);
+  	console.log(codePush);
+  	$.ajax({
+        type: "GET", 		
+        url: 'https://www.quandl.com/api/v3/datasets/XNSE/'+codePush+'.json?api_key=gWf2CLShwrGUBVnqzsT4&start_date=2015-07-05&end_date=2016-05-05', 		
+        dataType: "json", 	
+        processdata: true 	
+    }).done(function (data) {
+        console.log(data);
+
+
+    });
+
+
+  }
