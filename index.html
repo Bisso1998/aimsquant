@@ -30,15 +30,40 @@
   <!-- end of navbar -->
   <div class="container">
   	<br>
-  	 <input placeholder="Search Stock..." id="searchStock" type="text" >
-  	 <br><br><br>
-  	 <button class="waves-effect waves-light btn-large" onclick="drawGraph()">Go</a>
-  </div>
-
-<div id="abcdef">
-  
+  	<div class="row">
+	<div class="col s10">
+		<input placeholder="Search Stock..." id="searchStock" type="text" >
+	</div>
+	<div class="col s2">
+  	 <button class="waves-effect waves-light btn-large" onclick="drawGraph()">Goo</a>
+	</div>
 </div>
-
+  	 <br>
+  </div>
+<br>
+<div id="abcdef">
+</div>
+<br>
+<div class="container">
+  <div class="row">
+      <div class="col s6">
+        <div class="card-panel teal" style="max-height: 206px; padding-bottom: 30px">
+          <p style="color: white;"><b>Recent Searches</b></p>
+          <ul id="saveHistory">
+            
+          </ul>
+        </div>
+      </div>
+      <div class="col s6">
+        <div class="card-panel teal" style="max-height: 206px; padding-bottom: 30px">
+          <p style="color: white; max-height: 100px;"><b>Watch List</b></p>
+          <ul id="watchList">
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
     
 </body>
 </html>

@@ -65,30 +65,22 @@ console.log(jsonobject);
         {
         	chartDraw.push(value.dataset.data[i][4])
         }
-        // console.log(value.dataset.data[0][4]);
-        // console.log(value.dataset.data[1][4]);
-        // console.log(value.dataset.data[2][4]);
-        // console.log(value.dataset.data[3][4]);
-        // console.log(value.dataset.data[4][4]);
-        // console.log(value.dataset.data[5][4]);
-
-        // console.log(value.dataset.data[3][4]);
     });
     console.log( "chart draw is:" + chartDraw);
 
 Highcharts.chart('abcdef', {
 
     title: {
-        text: 'Solar Employment Growth by Sector, 2010-2016'
+        text: 'AimsQuant Stock Research, 2005-2016'
     },
 
     subtitle: {
-        text: 'Source: thesolarfoundation.com'
+        text: 'Source: AimsQuant Lab'
     },
 
     yAxis: {
         title: {
-            text: 'Number of Employees'
+            text: 'Close Prices'
         }
     },
     legend: {
@@ -128,7 +120,9 @@ Highcharts.chart('abcdef', {
     }
 
 });
-  }
+$('#saveHistory').append("<li style='color: white'>" + codePush + "</li>")
+
+}
 
 
 
