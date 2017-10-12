@@ -1,5 +1,6 @@
 // javascript
 var jsonobject,items;
+var i=0;
 var availableTags = [], chartDraw= [];
 
 	$.ajax({
@@ -120,9 +121,17 @@ Highcharts.chart('abcdef', {
     }
 
 });
-$('#saveHistory').append("<li style='color: white'>" + codePush + "</li>")
+
+$('#saveHistory').append("<li style='color: white' id="+ i+ "'>" + codePush + ' &nbsp;&nbsp; <button style="color: red" onclidick="deleteMe(i)">Delete</button>  ' +"</li>")
+i++;
+function deleteMe(i)
+{
+  $('#'+i).parent().remove();   
+}
 
 }
+
+
 
 
 
