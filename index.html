@@ -15,6 +15,11 @@
 <script src="https://code.highcharts.com/modules/series-label.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- adding animate.cc -->
+ <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
 </head>
 <body>
 	<nav>
@@ -41,23 +46,23 @@
   	 <br>
   </div>
 <br>
-<div id="abcdef">
+<div id="abcdef" class="animated fadeIn">
 </div>
 <br>
 <div class="container">
-  <div class="row">
+  <div class="row animated bounce"  style="display: none" id="amendAll">
       <div class="col s6">
-        <div class="card-panel red" style="max-height: 206px; padding-bottom: 30px">
-          <p style="color: white;"><b>Recent Searches</b> <button class="waves-effect waves-light btn-small " style= "color: blue" id="deleteAll">Delete</button> <button class="waves-effect waves-light btn-small " style= "color: blue" id="addtoWatch">Add</button></p>
+        <div class="card-panel red animated bounceInLeft" style="">
+          <p style="color: white;"><b>Recent Searches</b> <button class="waves-effect waves-light btn-small " style= "color: blue" id="deleteAll">Delete</button> <button class="waves-effect waves-light btn-small " style= "color: blue" id="addtoWatch">Add to watchlist</button></p>
 
           <ul id="saveHistory">
           </ul>
         </div>
       </div>
       <div class="col s6">
-        <div class="card-panel teal" style="max-height: 206px; padding-bottom: 30px">
+        <div class="card-panel teal animated bounceInRight" style="max-height: 206px; padding-bottom: 30px">
           <p style="color: white; max-height: 100px;"><b>Watch List</b></p>
-          <ul id="watchList">
+          <ul id="watchList" style="color: white">
             
           </ul>
         </div>

@@ -1,4 +1,6 @@
+
 $("#deleteAll").on("click", function() {
+
         console.log("entered func");
         var $boxes = $('input[name=deleteBox]:checked');
         console.log($boxes);
