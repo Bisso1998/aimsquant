@@ -7,3 +7,9 @@
   height: 400px;
   margin: 0 auto
 }
+
+
+input[type="checkbox"] 
+{
+	color: white;
+}

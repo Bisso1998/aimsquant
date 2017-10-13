@@ -32,10 +32,6 @@ var availableTags = [], chartDraw= [];
 
     }
 });
-
-    
-
-
 console.log(jsonobject);
   $( function() {
     $( "#searchStock" ).autocomplete({
@@ -47,24 +43,27 @@ console.log(jsonobject);
 
 
 
-  function drawGraph()
-  {
-  	var code = document.getElementById('searchStock').value;
-  	console.log(code);
-  	var len = code.length;
-  	var codePush = code.slice(5,len);
-  	console.log(codePush);
-  	$.ajax({
-        type: "GET", 		
-        url: 'https://www.quandl.com/api/v3/datasets/XNSE/'+codePush+'.json?api_key=gWf2CLShwrGUBVnqzsT4&start_date=2015-07-05&end_date=2016-05-05', 		
-        dataType: "json", 	
-        processdata: true 	
+
+
+//////////////////
+$(document).ready(function(){
+    $( "#createHistory" ).click(function() {
+    var code = document.getElementById('searchStock').value;
+    console.log(code);
+    var len = code.length;
+    var codePush = code.slice(5,len);
+    console.log(codePush);
+    $.ajax({
+        type: "GET",        
+        url: 'https://www.quandl.com/api/v3/datasets/XNSE/'+codePush+'.json?api_key=gWf2CLShwrGUBVnqzsT4&start_date=2015-07-05&end_date=2016-05-05',        
+        dataType: "json",   
+        processdata: true   
     }).done(function (value) {
         console.log(value);
         console.log(value.length);
         for(var i=0;i<219;i++)
         {
-        	chartDraw.push(value.dataset.data[i][4])
+            chartDraw.push(value.dataset.data[i][4])
         }
     });
     console.log( "chart draw is:" + chartDraw);
@@ -122,17 +121,16 @@ Highcharts.chart('abcdef', {
 
 });
 
-$('#saveHistory').append("<li style='color: white' id="+ i+ "'>" + codePush + ' &nbsp;&nbsp; <button style="color: red" onclidick="deleteMe(i)">Delete</button>  ' +"</li>")
+$('#saveHistory').append("<li style='color: white' id="+ i+ ">" + codePush + '</li>');
+$('#'+i).append('     <input type="checkbox" id="c'  +i+ '" /> <label for="c'+i+'">Select</label> ');
 i++;
-function deleteMe(i)
+});
+
+function deleteME(i)
 {
-  $('#'+i).parent().remove();   
+      $('#'+i).parent().remove();
+      console.log("HOWDYYY");
 }
-
-}
-
-
-
-
+})  
 
   
