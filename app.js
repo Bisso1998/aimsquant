@@ -122,7 +122,7 @@ Highcharts.chart('abcdef', {
 });
 
 $('#saveHistory').append("<li style='color: white' id="+ i+ ">" + codePush + '</li>');
-$('#'+i).append('     <input type="checkbox" id="c'  +i+ '" /> <label for="c'+i+'">Select</label> ');
+$('#'+i).append('     <input type="checkbox" name="deleteBox" id="c'  +i+ '" /> <label for="c'+i+'">Select</label> ');
 i++;
 });
 
