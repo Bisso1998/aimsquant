@@ -48,7 +48,8 @@
   <div class="row">
       <div class="col s6">
         <div class="card-panel red" style="max-height: 206px; padding-bottom: 30px">
-          <p style="color: white;"><b>Recent Searches</b> <button class="waves-effect waves-light btn-small " style= "color: blue" id="deleteAll">Delete</button></p>
+          <p style="color: white;"><b>Recent Searches</b> <button class="waves-effect waves-light btn-small " style= "color: blue" id="deleteAll">Delete</button> <button class="waves-effect waves-light btn-small " style= "color: blue" id="addtoWatch">Add</button></p>
+
           <ul id="saveHistory">
           </ul>
         </div>
@@ -62,26 +63,8 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript">
-      $("#deleteAll").on("click", function() {
-        console.log("entered func");
-        var $boxes = $('input[name=deleteBox]:checked');
-        console.log($boxes);
-          var len = $boxes.length;
-          $boxes.each(function(){
-              for(var i =0;i<len;i++)
-              {
-                $($boxes[i]).parent().remove();
-              }
-            // $('#'+i).parent().remove();
-          });
-        // for(i=0;i<5;i++)
-        // {
-        //   document.getElementById("c")
-        // }
-      });
+    <script type="text/javascript" src="history.js">
     </script>
 </div>
-    
 </body>
 </html>
